@@ -1,0 +1,114 @@
+.call {
+  text-align: center;
+}
+
+.call-form{
+  /* padding: 15%; */
+  border:2px solid green;
+  width: 50%;
+  margin: auto;
+}
+label{
+  display:block;
+}
+/* .inputForm div{
+  padding: 1%;
+  justify-content: center;
+  margin-bottom: 2%;
+  display: flex;
+} */
+.call-form input {
+  font-size: 1rem;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #6D8B74;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10%;
+}
+.call-form input:focus {
+  border-color: green
+}
+.call-form button{
+  margin-top: 3%;
+  font-size: 1.25rem;
+  padding: 4% 10%;
+  border-radius: 30px;
+  background-color: #6BCB77;
+  border: solid 2px #6BCB77 ;
+  cursor: pointer;
+}
+
+.player-container {
+  background-color: aqua;
+  text-align: initial;
+}
+.videos{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  row-gap: 50px;
+  padding: 5%;
+}
+.local-player-wrapper{
+  margin: auto;
+  align-items: center;
+  border: 5px solid green;
+}
+.remote-player-wrapper{
+  margin: auto;
+  align-items: center;
+  border: 5px solid red;
+}
+.button-group {
+  padding: 20px;
+}
+
+
+
+.call-form {
+  padding: 20px;
+}
+
+input, button {
+  margin-right: 10px;
+}
+.video-player{ 
+  width: 400px; 
+  height: 300px ;
+}
+.controls{
+
+  height:50px;
+  padding:2% 10%;
+  background-color: grey;
+  align-items:center;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr))
+}
+.buttonIcon{
+  color:red;
+  font-size:40px;
+  padding:20px;
+  background-color:white;
+  border-radius:50px;
+  border: 1px solid white;
+
+}
+.endButton{
+
+  text-align:center;
+
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+
+}
+.room{
+  top:0;
+  left: 0;
+  background-color: #C2DED1;
+  /* border:2px solid red; */
+  /* margin:auto; */
+  padding: 5%;
+}
