@@ -2,11 +2,11 @@
 import React, { useRef, useEffect,useState } from "react";
 import "./Call.css"
 function MediaPlayer(props){
-  const [isEmpty,setIsEmpty]=useState(false);
+  // const [isEmpty,setIsEmpty]=useState(false);
   const container = useRef();
   useEffect(() => {
     if (!container.current){
-      setIsEmpty(true);
+      // setIsEmpty(true);
       console.log("no video from remote user");
     };
     props.videoTrack?.play(container.current);
