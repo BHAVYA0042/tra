@@ -16,7 +16,12 @@ export default function useAgora(client){
     setLocalVideoTrack(cameraTrack);
     return [microphoneTrack, cameraTrack];
   }
-
+  async function shareScreen(){
+    await AgoraRTC.createScreenVideoTrack({
+      encoderConfig: "1080p_1",
+      optimizationMode: "detail"
+    })
+  }
   async function join(appid,channel,token,uid) {
     if (!client) return;
     const [microphoneTrack, cameraTrack] = await createLocalTracks();
@@ -96,6 +101,7 @@ export default function useAgora(client){
     join,
     mute,
     videoOff,
+    shareScreen,
     remoteUsers,
   };
 }

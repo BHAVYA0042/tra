@@ -21,7 +21,7 @@ function Call() {
   const [isVideoOff,setIsVideoOff]=useState(false);
  
   const {
-    localAudioTrack, localVideoTrack, leave, join,mute,videoOff,joinState, remoteUsers
+    localAudioTrack, localVideoTrack, leave, join,mute,videoOff,shareScreen,joinState, remoteUsers
   } = useAgora(client);
   function handleJoin(event){
     setIsConnecetd(true);
@@ -46,6 +46,10 @@ function Call() {
     videoOff(!isVideoOff)
     setIsVideoOff(!isVideoOff)
     event.preventDefault()
+  }
+  function handleShare(event){
+    shareScreen()
+    event.preventDefault();
   }
 
   return (
@@ -85,6 +89,9 @@ function Call() {
                 <div className="endButton">
                 {isVideoOff ? <VideocamOffIcon className="buttonIcon" onClick={videoClose}/>:
                   <VideocamIcon className="buttonIcon" onClick={videoClose}/>}
+                </div>
+                <div className= "share">
+                  <button onClick={handleShare}>SHAReScreen</button>
                 </div>
               </div> 
             </div>
