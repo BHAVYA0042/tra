@@ -13,11 +13,13 @@ function Chat(){
     event.preventDefault()
   }
   return(
+    <div>
+      <form onSubmit={handleSend}>
+        <input type="text" name="message" value={message} placeholder='Enter your message...' onChange={messageHandler} />
+        <button>Send</button>
+      </form>
+    </div>
     
-    <form onSubmit={handleSend}>
-      <input type="text" name="message" value={message} placeholder='Enter your message...' onChange={messageHandler} />
-      <button>Send</button>
-    </form>
 
   )
 }
