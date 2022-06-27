@@ -4,12 +4,12 @@ const agora_slice=createSlice({
   initialState:{
     users:[],
     creds:{
-      rtcToken:"",
       rtmToken:"",
       userName:""
     },
     channelCreds:{
       appid:"432c04ed8fe74085997cde10212cdf1d",
+      rtcToken:"006432c04ed8fe74085997cde10212cdf1dIAC6eDldnLTjH7+zCLlvl08+MaFgaUh1TNvmymoY8NrAUm/yXh0AAAAAEACJVdSDxoa6YgEAAQDGhrpi",
       channelName:"movie"
     },
     messages:[],
@@ -19,7 +19,6 @@ const agora_slice=createSlice({
   reducers:{
     setCreds(state,action){
       const newData=action.payload;
-      state.creds.rtcToken=newData.rtcToken;
       state.creds.rtmToken=newData.rtmToken;
       state.creds.userName=newData.userName;
     },

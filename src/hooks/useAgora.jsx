@@ -8,9 +8,6 @@ export default function useAgora(client){
   const [video,setVideo]=useState();
   const [joinState, setJoinState] = useState(false);
   const [remoteUsers, setRemoteUsers] = useState([]);
-  const [userList,setUserList]=useState([{
-    name:client.uid
-  }])
 
   async function createLocalTracks(audioConfig, videoConfig){
     const [microphoneTrack, cameraTrack] = await AgoraRTC.createMicrophoneAndCameraTracks(audioConfig, videoConfig);
@@ -75,16 +72,7 @@ export default function useAgora(client){
     }
     console.log(video);
   }
-  function showUsers(){
-    setUserList((prev)=>{
-      return[
-        ...prev,
-      
-      ]
-    })
-    console.log(remoteUsers)
-    // remoteUsers.map((item)=>console.log(item.uid))
-  }
+
 
   useEffect(() => {
     if (!client) return;
