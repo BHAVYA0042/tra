@@ -9,7 +9,7 @@ const agora_slice=createSlice({
     },
     channelCreds:{
       appid:"432c04ed8fe74085997cde10212cdf1d",
-      rtcToken:"006432c04ed8fe74085997cde10212cdf1dIAC6eDldnLTjH7+zCLlvl08+MaFgaUh1TNvmymoY8NrAUm/yXh0AAAAAEACJVdSDxoa6YgEAAQDGhrpi",
+      rtcToken:"006432c04ed8fe74085997cde10212cdf1dIAC1uWmEn7yaPHQ4eBzttKM7NBab/pkro5syNKMcv1zFb2/yXh0AAAAAEACJVdSDXLe6YgEAAQBdt7pi",
       channelName:"movie"
     },
     messages:[],
